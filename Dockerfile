@@ -2,9 +2,9 @@ FROM alpine:latest
 
 RUN addgroup -S myuser && adduser -S -G myuser myuser
 
-WORKDIR /home/myuser
-
 USER myuser
+
+WORKDIR /home/myuser
 
 RUN apk add git nodejs neovim ripgrep build-base wget python3 py3-pip --update
 
