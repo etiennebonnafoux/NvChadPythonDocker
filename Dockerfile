@@ -10,10 +10,8 @@ RUN git clone https://github.com/NvChad/starter /root/.config/nvim
     
 RUN nvim --headless  '+Lazy! sync' +MasonInstallAll +qa
 
-#RUN nvim --headless -c 'MasonInstallAll'
-#RUN nvim --headless -c 'MasonInstall pyright'
-#RUN nvim --headless -c 'MasonInstall ruff'
-#RUN nvim --headless -c 'q'
+RUN nvim --headless 'MasonInstallAll' +q 
+RUN nvim --headless 'MasonInstall pyright ruff' +q
 
 
 ENTRYPOINT ["/bin/sh"]
